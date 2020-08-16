@@ -8,6 +8,10 @@
 	license = /decl/license/cc_by_nc_4_0
 	url = "https://freemusicarchive.org/music/Astrometrics/Into_Hyperspace"
 
+/music_track/astrometrics/endmix
+	title = "Into Hyperspace (End Mix)"
+	song = 'sound/music/boh/hyperspace_end.ogg'
+
 /music_track/astrometrics/a_place
 	title = "I Have Heard of a Place"
 	album = "Life on Earth"
