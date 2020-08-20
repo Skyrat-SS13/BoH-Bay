@@ -1,5 +1,5 @@
 // Branch-specific defines
-#define UNRESTRICTED /datum/mil_branch/civilian, /datum/mil_branch/fleet
+#define UNRESTRICTED /datum/mil_branch/civilian, /datum/mil_branch/civilian/defense, /datum/mil_branch/fleet
 #define SEMIRESTRICTED /datum/mil_branch/marine_corps, /datum/mil_branch/private_security
 
 // Rank-specific defines
@@ -57,6 +57,7 @@
 		/datum/mil_branch/fleet,
 		/datum/mil_branch/marine_corps,
 		/datum/mil_branch/civilian,
+		/datum/mil_branch/civilian/defense,
 		/datum/mil_branch/solgov,
 		/datum/mil_branch/private_security,
 		/datum/mil_branch/army,
@@ -68,6 +69,7 @@
 		/datum/mil_branch/fleet,
 		/datum/mil_branch/marine_corps,
 		/datum/mil_branch/civilian,
+		/datum/mil_branch/civilian/defense,
 		/datum/mil_branch/solgov,
 		/datum/mil_branch/private_security,
 		/datum/mil_branch/alien,
@@ -89,7 +91,7 @@
 	)
 
 	species_to_branch_whitelist = list(
-		/datum/species/diona		= list(UNRESTRICTED, /datum/mil_branch/solgov, /datum/mil_branch/private_security),
+		/datum/species/diona		= list(UNRESTRICTED, /datum/mil_branch/civilian/defense, /datum/mil_branch/solgov, /datum/mil_branch/private_security),
 		/datum/species/nabber		= list(/datum/mil_branch/civilian),
 		/datum/species/skrell		= list(UNRESTRICTED, SEMIRESTRICTED, /datum/mil_branch/solgov, /datum/mil_branch/skrell_fleet),
 		/datum/species/unathi		= list(UNRESTRICTED, SEMIRESTRICTED, /datum/mil_branch/solgov),
@@ -723,6 +725,111 @@
 	name_short = "SAARE"
 	pow_cat = 3
 /*****/
+
+// Skyrat Addon: Civil Defense (bluntly put - civilian contractors but with ranks)
+/datum/mil_branch/civilian/defense
+	name = "Civil Defense Corps"
+	name_short = "CDC"
+
+	rank_types = list(
+		/datum/mil_rank/civ/contractor,
+		/datum/mil_rank/civ/ntr,
+		/datum/mil_rank/civ/defense/c1,
+		/datum/mil_rank/civ/defense/c2,
+		/datum/mil_rank/civ/defense/c3,
+		/datum/mil_rank/civ/defense/c4,
+		/datum/mil_rank/civ/defense/c5,
+		/datum/mil_rank/civ/defense/c6,
+		/datum/mil_rank/civ/defense/c7,
+		/datum/mil_rank/civ/defense/c8,
+		/datum/mil_rank/civ/defense/c9,
+		/datum/mil_rank/civ/defense/c10
+	)
+
+	spawn_rank_types = list(
+		/datum/mil_rank/civ/contractor,
+		/datum/mil_rank/civ/ntr,
+		/datum/mil_rank/civ/defense/c1,
+		/datum/mil_rank/civ/defense/c2,
+		/datum/mil_rank/civ/defense/c3,
+		/datum/mil_rank/civ/defense/c4,
+		/datum/mil_rank/civ/defense/c5,
+		/datum/mil_rank/civ/defense/c6,
+		/datum/mil_rank/civ/defense/c7,
+		/datum/mil_rank/civ/defense/c8,
+		/datum/mil_rank/civ/defense/c9,
+		/datum/mil_rank/civ/defense/c10
+	)
+
+/datum/mil_rank/civ/defense/grade()
+	. = ..()
+	if(!sort_order)
+		return ""
+	return "CD[sort_order]"
+
+/datum/mil_rank/civ/defense
+	pow_cat = 3
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/civil_defense)
+
+/datum/mil_rank/civ/defense/c1
+	name = "Defense Volunteer"
+	name_short = "DV"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/civil_defense/c1)
+	sort_order = 1
+
+/datum/mil_rank/civ/defense/c2
+	name = "Defense Associate Second Class"
+	name_short = "DA2"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/civil_defense/c2)
+	sort_order = 2
+
+/datum/mil_rank/civ/defense/c3
+	name = "Defense Associate First Class"
+	name_short = "DA1"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/civil_defense/c3)
+	sort_order = 3
+
+/datum/mil_rank/civ/defense/c4
+	name = "Defense Leader"
+	name_short = "DL"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/civil_defense/c4)
+	sort_order = 4
+
+/datum/mil_rank/civ/defense/c5
+	name = "Third Defense Officer"
+	name_short = "3DO"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/civil_defense/c5)
+	sort_order = 5
+
+/datum/mil_rank/civ/defense/c6
+	name = "Second Defense Officer"
+	name_short = "2DO"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/civil_defense/c6)
+	sort_order = 6
+
+/datum/mil_rank/civ/defense/c7
+	name = "First Defense Officer"
+	name_short = "1DO"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/civil_defense/c7)
+	sort_order = 7
+
+/datum/mil_rank/civ/defense/c8
+	name = "Civil Defense Commandant"
+	name_short = "CDCMD"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/civil_defense/c8)
+	sort_order = 8
+
+/datum/mil_rank/civ/defense/c9
+	name = "Civil Defense Adjutant"
+	name_short = "CDADJ"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/civil_defense/c9)
+	sort_order = 9
+
+/datum/mil_rank/civ/defense/c10
+	name = "Head of Civil Defense"
+	name_short = "HCD"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/civil_defense/c10)
+	sort_order = 10
 
 // Ends of defines
 #undef UNRESTRICTED

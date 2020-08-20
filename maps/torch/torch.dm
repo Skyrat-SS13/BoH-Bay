@@ -28,6 +28,7 @@
 	//#include "datums/uniforms_fleet.dm"
 	#include "datums/uniforms_exp_fleet.dm"
 	#include "datums/uniforms_marine-corps.dm"
+	#include "datums/uniforms_soh.dm"
 	#include "datums/reports/command.dm"
 	#include "datums/reports/corporate.dm"
 	#include "datums/reports/exploration.dm"
@@ -88,6 +89,7 @@
 	#include "items/clothing/boh_under.dm"
 	#include "items/clothing/boh_accessory.dm"
 	#include "items/clothing/boh_clothing.dm"
+	#include "items/clothing/soh_accessory.dm"
 
 	#include "items/psyker/agent_items.dm"
 
