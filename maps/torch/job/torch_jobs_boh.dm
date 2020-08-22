@@ -364,11 +364,16 @@
 /datum/job/janitor
 	allowed_branches = list(
 		/datum/mil_branch/civilian,
+		/datum/mil_branch/civilian/sanitation_corps,
 		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/service/janitor/ec,
 		/datum/mil_branch/marine_corps = /decl/hierarchy/outfit/job/torch/crew/service/janitor/marine
 	)
 	allowed_ranks = list(
 		/datum/mil_rank/civ/contractor,
+		/datum/mil_rank/civ/contractor/santcorp1,
+		/datum/mil_rank/civ/contractor/santcorp2,
+		/datum/mil_rank/civ/contractor/santcorp3,
+		/datum/mil_rank/civ/contractor/santcorp4,
 		/datum/mil_rank/fleet/e2,
 		/datum/mil_rank/fleet/e2_exp,
 		/datum/mil_rank/fleet/e3,

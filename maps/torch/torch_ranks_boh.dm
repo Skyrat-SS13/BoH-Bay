@@ -1,6 +1,7 @@
 // Branch-specific defines
 #define UNRESTRICTED /datum/mil_branch/civilian, /datum/mil_branch/fleet
 #define SEMIRESTRICTED /datum/mil_branch/marine_corps, /datum/mil_branch/private_security
+#define MEMES /datum/mil_branch/civilian/sanitation_corps, /datum/mil_branch/hayden_corps
 
 // Rank-specific defines
 #define SMC_TROOPERS_ONLY /datum/mil_branch/marine_corps = list(\
@@ -61,7 +62,9 @@
 		/datum/mil_branch/private_security,
 		/datum/mil_branch/army,
 		/datum/mil_branch/alien,
-		/datum/mil_branch/skrell_fleet
+		/datum/mil_branch/skrell_fleet,
+		/datum/mil_branch/civilian/sanitation_corps,
+		/datum/mil_branch/hayden_corps
 	)
 
 	spawn_branch_types = list(
@@ -71,7 +74,8 @@
 		/datum/mil_branch/solgov,
 		/datum/mil_branch/private_security,
 		/datum/mil_branch/alien,
-		/datum/mil_branch/skrell_fleet
+		/datum/mil_branch/skrell_fleet,
+		/datum/mil_branch/civilian/sanitation_corps
 	)
 
 	species_to_branch_blacklist = list(
@@ -89,18 +93,18 @@
 	)
 
 	species_to_branch_whitelist = list(
-		/datum/species/diona		= list(UNRESTRICTED, /datum/mil_branch/solgov, /datum/mil_branch/private_security),
-		/datum/species/nabber		= list(/datum/mil_branch/civilian),
-		/datum/species/skrell		= list(UNRESTRICTED, SEMIRESTRICTED, /datum/mil_branch/solgov, /datum/mil_branch/skrell_fleet),
-		/datum/species/unathi		= list(UNRESTRICTED, SEMIRESTRICTED, /datum/mil_branch/solgov),
-		/datum/species/unathi/yeosa	= list(UNRESTRICTED, SEMIRESTRICTED, /datum/mil_branch/solgov),
-		/datum/species/adherent		= list(/datum/mil_branch/civilian, /datum/mil_branch/solgov),
-		/datum/species/custom		= list(UNRESTRICTED, SEMIRESTRICTED, /datum/mil_branch/solgov),
-		/datum/species/humanathi	= list(UNRESTRICTED, SEMIRESTRICTED, /datum/mil_branch/solgov),
-		/datum/species/tajaran		= list(UNRESTRICTED, SEMIRESTRICTED, /datum/mil_branch/solgov),
- 		/datum/species/shapeshifter/promethean	= list(UNRESTRICTED, /datum/mil_branch/solgov, /datum/mil_branch/private_security),
-		/datum/species/plasmasans	= list(/datum/mil_branch/civilian, /datum/mil_branch/solgov),
-		/datum/species/vox			= list(/datum/mil_branch/alien),
+		/datum/species/diona		= list(UNRESTRICTED, /datum/mil_branch/solgov, /datum/mil_branch/private_security, MEMES),
+		/datum/species/nabber		= list(/datum/mil_branch/civilian, MEMES),
+		/datum/species/skrell		= list(UNRESTRICTED, SEMIRESTRICTED, /datum/mil_branch/solgov, /datum/mil_branch/skrell_fleet, MEMES),
+		/datum/species/unathi		= list(UNRESTRICTED, SEMIRESTRICTED, /datum/mil_branch/solgov, MEMES),
+		/datum/species/unathi/yeosa	= list(UNRESTRICTED, SEMIRESTRICTED, /datum/mil_branch/solgov, MEMES),
+		/datum/species/adherent		= list(/datum/mil_branch/civilian, /datum/mil_branch/solgov, MEMES),
+		/datum/species/custom		= list(UNRESTRICTED, SEMIRESTRICTED, /datum/mil_branch/solgov, MEMES),
+		/datum/species/humanathi	= list(UNRESTRICTED, SEMIRESTRICTED, /datum/mil_branch/solgov, MEMES),
+		/datum/species/tajaran		= list(UNRESTRICTED, SEMIRESTRICTED, /datum/mil_branch/solgov, MEMES),
+ 		/datum/species/shapeshifter/promethean	= list(UNRESTRICTED, /datum/mil_branch/solgov, /datum/mil_branch/private_security, MEMES),
+		/datum/species/plasmasans	= list(/datum/mil_branch/civilian, /datum/mil_branch/solgov, MEMES),
+		/datum/species/vox			= list(/datum/mil_branch/alien, MEMES),
 		/datum/species/vox/armalis	= list(/datum/mil_branch/alien)
 	)
 
@@ -724,9 +728,145 @@
 	pow_cat = 3
 /*****/
 
+// Addon: Memes
+/datum/mil_branch/civilian/sanitation_corps
+	name = "Sanitation Corps"
+	name_short = "SantCorp"
+
+	rank_types = list(
+		/datum/mil_rank/civ/contractor/santcorp1,
+		/datum/mil_rank/civ/contractor/santcorp2,
+		/datum/mil_rank/civ/contractor/santcorp3,
+		/datum/mil_rank/civ/contractor/santcorp4
+	)
+
+	spawn_rank_types = list(
+		/datum/mil_rank/civ/contractor/santcorp1,
+		/datum/mil_rank/civ/contractor/santcorp2,
+		/datum/mil_rank/civ/contractor/santcorp3,
+		/datum/mil_rank/civ/contractor/santcorp4
+	)
+
+/datum/mil_rank/civ/contractor/santcorp1
+	name = "Sanitation Corpsman Grade One"
+	name_short = "SC1"
+
+/datum/mil_rank/civ/contractor/santcorp2
+	name = "Sanitation Corpsman Grade Two"
+	name_short = "SC2"
+
+/datum/mil_rank/civ/contractor/santcorp3
+	name = "Leading Sanitation Corpsman"
+	name_short = "LSC"
+
+/datum/mil_rank/civ/contractor/santcorp4
+	name = "Head of Sanitation Corps"
+	name_short = "HSC"
+
+// The Man, The Legend, The Hayden
+/datum/mil_branch/hayden_corps
+	name = "Hayden Corps"
+	name_short = "HayCor"
+	email_domain = "3inch.com"
+
+	rank_types = list(
+		/datum/mil_rank/hayden_corps/e3,
+		/datum/mil_rank/hayden_corps/e5,
+		/datum/mil_rank/hayden_corps/e7,
+		/datum/mil_rank/hayden_corps/e9,
+		/datum/mil_rank/hayden_corps/o1,
+		/datum/mil_rank/hayden_corps/o3,
+		/datum/mil_rank/hayden_corps/o5,
+		/datum/mil_rank/hayden_corps/o7,
+		/datum/mil_rank/hayden_corps/o9,
+		/datum/mil_rank/hayden_corps/o9_alt,
+		/datum/mil_rank/hayden_corps/o10
+	)
+
+	spawn_rank_types = list(
+		/datum/mil_rank/hayden_corps/e3,
+		/datum/mil_rank/hayden_corps/e5,
+		/datum/mil_rank/hayden_corps/e7,
+		/datum/mil_rank/hayden_corps/e9,
+		/datum/mil_rank/hayden_corps/o1,
+		/datum/mil_rank/hayden_corps/o3,
+		/datum/mil_rank/hayden_corps/o5,
+		/datum/mil_rank/hayden_corps/o7,
+		/datum/mil_rank/hayden_corps/o9,
+		/datum/mil_rank/hayden_corps/o9_alt,
+		/datum/mil_rank/hayden_corps/o10
+	)
+
+/datum/mil_rank/hayden_corps/e3
+	name = "Private Military Contractor"
+	name_short = "PMC"
+	sort_order = 3
+	pow_cat = 3
+
+/datum/mil_rank/hayden_corps/e5
+	name = "Private Military Team Leader"
+	name_short = "PMC-TL"
+	sort_order = 5
+	pow_cat = 3
+
+/datum/mil_rank/hayden_corps/e7
+	name = "Private Military Section Head"
+	name_short = "PMC-SH"
+	sort_order = 7
+	pow_cat = 3
+
+/datum/mil_rank/hayden_corps/e9
+	name = "Private Military Deputy"
+	name_short = "PMC-D"
+	sort_order = 9
+	pow_cat = 3
+
+/datum/mil_rank/hayden_corps/o1
+	name = "Private Military Officer"
+	name_short = "PMC-O"
+	sort_order = 11
+	pow_cat = 3
+
+/datum/mil_rank/hayden_corps/o3
+	name = "Private Military Senior Officer"
+	name_short = "PMC-SO"
+	sort_order = 13
+	pow_cat = 3
+
+/datum/mil_rank/hayden_corps/o5
+	name = "Private Military Executive Officer"
+	name_short = "PMC-EO"
+	sort_order = 15
+	pow_cat = 3
+
+/datum/mil_rank/hayden_corps/o7
+	name = "Private Military Senior Executive Officer"
+	name_short = "PMC-SEO"
+	sort_order = 17
+	pow_cat = 3
+
+/datum/mil_rank/hayden_corps/o9
+	name = "Private Military Chief Executive Officer"
+	name_short = "PMC-CEO"
+	sort_order = 19
+	pow_cat = 3
+
+/datum/mil_rank/hayden_corps/o9_alt
+	name = "Vice Chairman of Private Military Company"
+	name_short = "PMC-VCM"
+	sort_order = 19
+	pow_cat = 3
+
+/datum/mil_rank/hayden_corps/o10
+	name = "Chairman of Private Military Company"
+	name_short = "PMC-CM"
+	sort_order = 20
+	pow_cat = 3
+
 // Ends of defines
 #undef UNRESTRICTED
 #undef SEMIRESTRICTED
+#undef MEMES
 #undef SMC_TROOPERS_ONLY
 #undef SMC_LIMITED_RANKS
 #undef NTEF_ENLISTED_ONLY
