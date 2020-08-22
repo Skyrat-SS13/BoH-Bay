@@ -820,8 +820,8 @@
 	sort_order = 8
 
 /datum/mil_rank/civ/defense/c9
-	name = "Civil Defense Adjutant"
-	name_short = "CDADJ"
+	name = "Civil Defense Head Adjutant"
+	name_short = "CDHA"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/civil_defense/c9)
 	sort_order = 9
 

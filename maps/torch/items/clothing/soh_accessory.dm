@@ -15,14 +15,14 @@
 /obj/item/clothing/accessory/solgov/rank/civil_defense/c2
 	icon_state = "CD2"
 	overlay_state = "cdrank2"
-	name = "ranks (CD-2 defense corpsman second class)"
-	desc = "Insignia denoting the rank of Defense Corpsman Second Class."
+	name = "ranks (CD-2 defense associate second class)"
+	desc = "Insignia denoting the rank of Defense Associate Second Class."
 
 /obj/item/clothing/accessory/solgov/rank/civil_defense/c3
 	icon_state = "CD3"
 	overlay_state = "cdrank2"
-	name = "ranks (CD-3 defense corpsman first class)"
-	desc = "Insignia denoting the rank of Defense Corpsman First Class."
+	name = "ranks (CD-3 defense associate first class)"
+	desc = "Insignia denoting the rank of Defense Associate First Class."
 
 /obj/item/clothing/accessory/solgov/rank/civil_defense/c4
 	icon_state = "CD4"
@@ -44,6 +44,7 @@
 
 /obj/item/clothing/accessory/solgov/rank/civil_defense/c7
 	icon_state = "CD7"
+	overlay_state = "cdrank8"
 	name = "ranks (CD-7 first defense officer)"
 	desc = "Insignia denoting the rank of First Defense Officer."
 
@@ -56,8 +57,8 @@
 /obj/item/clothing/accessory/solgov/rank/civil_defense/c9
 	icon_state = "CD9"
 	overlay_state = "cdrank8"
-	name = "ranks (CD-9 civil defense adjutant)"
-	desc = "Insignia denoting the rank of Civil Defense Adjutant."
+	name = "ranks (CD-9 civil defense head adjutant)"
+	desc = "Insignia denoting the rank of Civil Defense Head Adjutant."
 
 /obj/item/clothing/accessory/solgov/rank/civil_defense/c10
 	icon_state = "CD10"

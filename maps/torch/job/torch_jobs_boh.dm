@@ -507,7 +507,6 @@
 		/datum/mil_rank/civ/defense/c2,
 		/datum/mil_rank/civ/defense/c3
 	)
-
 /***/
 
 // Corporate
@@ -517,11 +516,10 @@
 		"Union Representative" = /decl/hierarchy/outfit/job/torch/passenger/workplace_liaison/union_rep,
 		"Corporate Representative",
 		"Civil Defense Representative",
-		"Civil Defender",
 		"Corporate Executive"
 		)
 	allowed_branches = list(/datum/mil_branch/civilian, /datum/mil_branch/civilian/defense)
-	allowed_ranks = list(/datum/mil_rank/civ/ntr, /datum/mil_rank/civ/defense/c8, /datum/mil_rank/civ/defense/c9, /datum/mil_rank/civ/defense/c10)
+	allowed_ranks = list(/datum/mil_rank/civ/ntr, /datum/mil_rank/civ/defense/c8)
 
 /datum/job/bodyguard
 	allowed_branches = list(/datum/mil_branch/private_security, /datum/mil_branch/civilian)
