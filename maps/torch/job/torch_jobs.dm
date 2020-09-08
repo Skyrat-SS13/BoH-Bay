@@ -1,7 +1,6 @@
 /datum/map/torch
 	species_to_job_whitelist = list(
-		/datum/species/nabber = list(/datum/job/ai, /datum/job/cyborg, /datum/job/janitor, /datum/job/scientist_assistant, /datum/job/chemist,
-									 /datum/job/roboticist, /datum/job/cargo_tech, /datum/job/chef, /datum/job/engineer, /datum/job/doctor, /datum/job/bartender),
+		/datum/species/nabber = list(/datum/job/psiadvisor,/datum/job/explorer,/datum/job/engineer, /datum/job/roboticist, /datum/job/engineer_trainee,/datum/job/doctor, /datum/job/chemist, /datum/job/medical_trainee,/datum/job/psychiatrist, /datum/job/chaplain,/datum/job/cargo_tech, /datum/job/mining,/datum/job/janitor, /datum/job/chef, /datum/job/bartender,/datum/job/scientist, /datum/job/scientist_assistant,/datum/job/ai, /datum/job/cyborg,/datum/job/merchant), //SKYRAT EDIT.
 		/datum/species/vox/ = list(/datum/job/ai, /datum/job/cyborg, /datum/job/merchant),
 		/datum/species/vox/armalis = list(/datum/job/ai, /datum/job/cyborg, /datum/job/merchant),
 		/datum/species/human/mule = list(/datum/job/ai, /datum/job/cyborg, /datum/job/merchant)
